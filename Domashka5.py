@@ -1,22 +1,24 @@
 #26
 '''
-def step(a,b):
+def power(a, b):
     if b == 0:
         return 1
-    return pow(a,b)
-a = int(input("Введите A: "))
-b = int(input("Введите B: "))
-print(step(a,b))
-'''
-#28
+    return power(a, b - 1) * a
 
-def sist(a):
-    txt = " "
-    while a > 0:
-        txt = str(a % 2) + txt
-        a //=2
-    return txt
-a = int(input("Введите чило: "))
+a = int(input())
+b = int(input())
+print(power(a, b))'''
+
+
+#28
    
-print(sist(a))
+def binary(n):
+    if n == 0 or n == 1:
+        return f'{n}'
+    return binary(n // 2) + f'{n % 2}'
+
+n = int(input())
+print(binary(n))
+
+
 
